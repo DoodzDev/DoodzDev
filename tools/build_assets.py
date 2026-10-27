@@ -13,9 +13,11 @@ SRC = ROOT / "tools" / "src"
 OUT = ROOT / "assets"
 
 # Couleurs officielles de GitHub (Primer) : thème clair et thème sombre par défaut
+# Fond transparent : l'image prend la couleur de la page, quel que soit le thème GitHub
+# (clair, sombre, « dimmed », contraste élevé). Bordures et textes lisibles sur tous les thèmes d'une même famille.
 THEMES = {
-    "dark": dict(bg="#0d1117", card="#0d1117", line="#3d444d", fg="#f0f6fc", fg2="#9198a1", fg3="#9198a1", accent="#4493f8", icon_bg="#151b23", fire="#d29922"),
-    "light": dict(bg="#ffffff", card="#ffffff", line="#d1d9e0", fg="#1f2328", fg2="#59636e", fg3="#59636e", accent="#0969da", icon_bg="#f6f8fa", fire="#9a6700"),
+    "dark": dict(card="none", line="#9198a1", line_op=".35", fg="#f0f6fc", fg2="#9198a1", fg3="#9198a1", accent="#4493f8", icon_bg="#9198a1", icon_op=".12", fire="#d29922", bg="#0d1117"),
+    "light": dict(card="none", line="#59636e", line_op=".28", fg="#1f2328", fg2="#59636e", fg3="#59636e", accent="#0969da", icon_bg="#59636e", icon_op=".08", fire="#9a6700", bg="#ffffff"),
 }
 # Couleurs des langages telles que GitHub les affiche (linguist)
 LANG = {"TypeScript": "#3178c6", "Rust": "#dea584", "Python": "#3572A5", "C#": "#178600", "C": "#555555"}
@@ -72,7 +74,7 @@ def icon(p, c, x, y, size):
         f'<rect x="{x + size * .08}" y="{y + size * (.27 + i * .155)}" width="{size * .12}" height="{size * .06}" rx="1.5" fill="{c["accent"]}"/>'
         f'<rect x="{x + size * .8}" y="{y + size * (.27 + i * .155)}" width="{size * .12}" height="{size * .06}" rx="1.5" fill="{c["accent"]}"/>'
         for i in range(4))
-    return (f'<rect x="{x}" y="{y}" width="{size}" height="{size}" rx="{size * .22}" fill="{c["icon_bg"]}"/>{pins}'
+    return (f'<rect x="{x}" y="{y}" width="{size}" height="{size}" rx="{size * .22}" fill="{c["icon_bg"]}" fill-opacity="{c["icon_op"]}"/>{pins}'
             f'<rect x="{x + size * .22}" y="{y + size * .22}" width="{size * .56}" height="{size * .56}" rx="{size * .08}" fill="{c["fg"]}"/>'
             f'<text x="{x + size / 2}" y="{y + size * .56}" text-anchor="middle" class="m" font-size="{size * .15}" font-weight="600" fill="{c["bg"]}">ESP32</text>')
 
@@ -91,9 +93,9 @@ def card(p, theme):
             f'<text x="{W - 28}" y="175" text-anchor="end" class="s" font-size="14" fill="{c["fg2"]}">{esc(p["link"])}</text>'
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{esc(p["name"])}: {esc(" ".join(p["lines"]))}">
 {FONTS}
-<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="12" fill="{c["card"]}" stroke="{c["line"]}" stroke-width="2"/>
+<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="12" fill="{c["card"]}" stroke="{c["line"]}" stroke-opacity="{c["line_op"]}" stroke-width="2"/>
 {icon(p, c, 28, 28, 68)}
-<rect x="28" y="28" width="68" height="68" rx="15" fill="none" stroke="{c["line"]}" stroke-width="1.5"/>
+<rect x="28" y="28" width="68" height="68" rx="15" fill="none" stroke="{c["line"]}" stroke-opacity="{c["line_op"]}" stroke-width="1.5"/>
 <text x="116" y="60" class="s" font-size="22" font-weight="600" fill="{c["accent"]}">{esc(p["name"])}</text>
 {lines}
 {langs}
@@ -113,12 +115,12 @@ def banner(theme):
            f'<path d="M{ax + 50} {ay + 120} L{ax + 70} {ay + 84} L{ax + 90} {ay + 120}"/>'
            f'<path d="M{ax + 196} {ay + 120} c-14 -10 -16 -26 -2 -44 c2 14 10 16 12 6 c8 12 8 28 -10 38z" stroke="{c["fire"]}"/>'
            f'<path d="M{ax + 176} {ay + 122} l40 -10 M{ax + 176} {ay + 112} l40 10"/>'
-           f'</g><line x1="{ax - 40}" y1="{ay + 122}" x2="{W - 48}" y2="{ay + 122}" stroke="{c["line"]}" stroke-width="2"/>')
+           f'</g><line x1="{ax - 40}" y1="{ay + 122}" x2="{W - 48}" y2="{ay + 122}" stroke="{c["line"]}" stroke-opacity="{c["line_op"]}" stroke-width="2"/>')
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Doodz. Automation technician by day. I build the tools I can't find elsewhere, sleep in the woods, and film it.">
 {FONTS}
-<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="12" fill="{c["card"]}" stroke="{c["line"]}" stroke-width="2"/>
+<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="12" fill="{c["card"]}" stroke="{c["line"]}" stroke-opacity="{c["line_op"]}" stroke-width="2"/>
 <clipPath id="av"><circle cx="130" cy="150" r="66"/></clipPath>
-<circle cx="130" cy="150" r="68" fill="{c["line"]}"/>
+<circle cx="130" cy="150" r="68" fill="{c["line"]}" fill-opacity="{c["line_op"]}"/>
 <image x="64" y="84" width="132" height="132" clip-path="url(#av)" href="data:image/jpeg;base64,{b64('avatar.png')}"/>
 <text x="232" y="136" class="s" font-size="60" font-weight="600" letter-spacing="-1.5" fill="{c["fg"]}">Doodz</text>
 <text x="232" y="180" class="s" font-size="22" fill="{c["fg2"]}">Automation technician by day. I build the tools</text>
