@@ -1,46 +1,40 @@
-<div align="center">
+<a href="https://doodz.dev">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner-light.svg" width="100%" alt="Doodz. Automation technician by day. I build the tools I can't find elsewhere, sleep in the woods, and film it.">
+  </picture>
+</a>
 
-*Building apps nobody asked for · I write code so I don't have to talk to people · Probably future goat farmer*
+<p align="center">
+  <a href="https://doodz.dev"><b>doodz.dev</b></a> &nbsp;·&nbsp;
+  <a href="https://www.youtube.com/c/Doodz"><b>YouTube</b></a> &nbsp;·&nbsp;
+  <a href="mailto:contact@doodz.dev"><b>contact@doodz.dev</b></a>
+</p>
 
-</div>
+## What I build
 
----
+<p>
+  <a href="https://github.com/DoodzDev/Musonic"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-musonic-dark.svg"><img src="assets/card-musonic-light.svg" width="49%" alt="Musonic: your own music server, played like Spotify. Android, iOS, Android Auto, web and server."></picture></a>
+  <a href="https://github.com/DoodzDev/AcouZ"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-acouz-dark.svg"><img src="assets/card-acouz-light.svg" width="49%" alt="AcouZ: hold a key, speak, release, and your words appear in any Windows app."></picture></a>
+  <a href="https://github.com/DoodzDev/PONI"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-poni-dark.svg"><img src="assets/card-poni-light.svg" width="49%" alt="PONI: switch IP, mask and DNS in one click on Windows."></picture></a>
+  <a href="https://github.com/DoodzDev/ESP32-BMS-Gateway-Multi-Protocol"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-esp32-dark.svg"><img src="assets/card-esp32-light.svg" width="49%" alt="ESP32 BACnet/Modbus: a BACnet/IP to Modbus TCP gateway for about 10 euros."></picture></a>
+</p>
 
-<div align="left">
+## Right now
 
-## Tech
+Building Musonic's own Android Auto screens. Podcasts are next.
 
-![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
-![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
+## Elsewhere
 
----
-
-## YouTube
-
-- **[Doodz](https://www.youtube.com/c/Doodz)** — Outdoor, bushcraft, IT, woodworking, storytelling — my playground, my rules.
-- **[gaetanlcf](https://www.youtube.com/@gaetanlcf)** — Technical companion to some of my repos on Github.
-
----
+- **[Doodz](https://www.youtube.com/c/Doodz)** on YouTube: bivouacs, bushcraft and the occasional vlog.
+- **[gaetanlcf](https://www.youtube.com/@gaetanlcf)**: technical companion videos for some of these repos.
+- My gear, field guides and projects live on **[doodz.dev](https://doodz.dev)**.
 
 ## Support
 
-If something I built saved you time, a small tip is always appreciated.
+If something I built saved you time, you can [buy me a coffee on PayPal](https://www.paypal.com/donate?hosted_button_id=UFY7N3WCJ5T4E) or send crypto:
 
-[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-0070ba?logo=paypal&logoColor=white)](https://www.paypal.com/donate?hosted_button_id=UFY7N3WCJ5T4E)
-
-| Crypto | Address | Network |
+| | Address | Network |
 |---|---|---|
-| ₿ BTC | `bc1qwxsakp452llzrd6y9px65x24k5ul5cmtnystal` | Bitcoin only |
-| Ξ ETH | `0xFef0FA58F2aE42a4F1453F1D86332d6eda962572` | Ethereum mainnet only |
-
-<sub>⚠️ Please use the network shown above — funds sent on another network (Base, BSC, Arbitrum…) may be lost.</sub>
-
-</div>
-
-<div align="center"><sub>Everything else lives at <a href="https://doodz.dev">https://doodz.dev</a></sub></div>
+| **BTC** | `bc1qwxsakp452llzrd6y9px65x24k5ul5cmtnystal` | Bitcoin only |
+| **ETH** | `0xFef0FA58F2aE42a4F1453F1D86332d6eda962572` | Ethereum mainnet only |

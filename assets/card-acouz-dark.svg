@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="200" viewBox="0 0 620 200" role="img" aria-label="AcouZ: Hold a key, speak, release: your words appear in any Windows app.">
+<style>.s{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif}.m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}</style>
+<rect x="1" y="1" width="618" height="198" rx="12" fill="#0d1117" stroke="#3d444d" stroke-width="2"/>
+<svg x="28" y="28" width="68" height="68" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="acouz-bgL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#1E2822"/>
+      <stop offset="100%" stop-color="#121814"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" rx="44" fill="url(#acouz-bgL)"/>
+
+  <!-- Left leg of A -->
+  <line x1="40" y1="164" x2="100" y2="36"
+        stroke="white" stroke-width="20"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right leg of A -->
+  <line x1="100" y1="36" x2="160" y2="164"
+        stroke="white" stroke-width="20"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Z-pulse crossbar (green lightning bolt) -->
+  <polyline points="64,120 86,110 114,130 136,120"
+            fill="none" stroke="#1DB954" stroke-width="9"
+            stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+<rect x="28" y="28" width="68" height="68" rx="15" fill="none" stroke="#3d444d" stroke-width="1.5"/>
+<text x="116" y="60" class="s" font-size="22" font-weight="600" fill="#4493f8">AcouZ</text>
+<text x="116" y="92" class="s" font-size="16" fill="#9198a1">Hold a key, speak, release: your words</text><text x="116" y="116" class="s" font-size="16" fill="#9198a1">appear in any Windows app.</text>
+<circle cx="34" cy="170" r="6" fill="#3572A5"/><text x="46" y="175" class="s" font-size="14" fill="#9198a1">Python</text>
+<g transform="translate(451.5 162)"><path d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25Zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0Z" fill="#9198a1"/></g><text x="592" y="175" text-anchor="end" class="s" font-size="14" fill="#4493f8">acouz.doodz.dev</text>
+</svg>
